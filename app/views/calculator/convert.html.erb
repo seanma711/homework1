@@ -5,38 +5,8 @@
     <title></title>
   </head>
   <body>
-    <h5>Input: <%=@x%></h5><br>
-    <h5>Conversion: <%=@a%> to <%=@b%></h5><br>
-    Output:<h5 id="container">Output:</h5>
-    <script>
-      let temp;
-      let a = '<%=@a%>';
-      let b = '<%=@b%>';
-      let x = <%=@x%>;
-      if(a=="c") {
-        if(b=="k"){
-          temp = x+273.15;
-        }else if(b=="f"){
-          temp = x*0.555+32;
-        }
-      }else if(a=="k"){
-        if(b=="f"){
-          temp = (x-273.15)*(9/5)+32;
-        }else if(b=="c") {
-          temp = x-273.15;
-        }
-      }else if(a=="f"){
-        if(b=="c") {
-          temp = (x-32)*(5/9);
-        }else if(b=="k"){
-          temp = (x-32)*5/9+273.15;
-        }
-      }
-      temp = Math.floor(temp);
-      console.log(temp);
-      let display = temp.toString();
-      console.log(temp.toString());
-      document.getElementById('container').innerHTML = display;
-    </script>
+    <h5>Input: <%=@input%></h5><br>
+    <h5>Conversion: <%=@origin_unit%> to <%=@convert_unit%></h5><br>
+    Output:<h5 id="container"><%=@output%></h5> degrees <%=@convert_unit%>
   </body>
 </html>
