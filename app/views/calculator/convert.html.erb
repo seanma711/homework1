@@ -5,8 +5,30 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+
+    </div>
     <script type="text/javascript">
-      
+      let temp;
+      if(<%@a%>==="c") {
+        if(<%@b%>==="k"){
+          temp = <%@x.to_int%>+273.15;
+        }else if(<%@b%>==="f"){
+          temp = <%@x.to_int%>*(9/5)+32;
+        }
+      }else if(<%@a%>==="k"){
+        if(<%@b%>==="f"){
+          temp = (<%@x.to_int%>-273.15) × (9/5) + 32 ;
+        }else if(<%@b%>==="c") {
+          temp = <%@x.to_int%>-273.15;
+        }
+      }else if(<%@a%>==="f"){
+        if(<%@b%>==="c") {
+          temp = (<%@x.to_int%>-32)*(5/9);
+        }else if(<%@b%>==="k"){
+          temp = (<%@x.to_int%>- 32) × 5/9 + 273.15;
+        }
+      }
     </script>
   </body>
 </html>
