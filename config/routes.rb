@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/calculator", to: "calculator#index"
+  get "/calculator/:x/:a/to/:b", to: "calculator#convert"
 end
